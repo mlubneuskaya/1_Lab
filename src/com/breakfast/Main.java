@@ -20,6 +20,9 @@ public class Main {
                 } else if(parameters.length == 2){
                     Constructor<?> constructor = someClass.getConstructor(String.class);
                     breakfast.add((Food)constructor.newInstance(parameters[1]));
+                }else{
+                    Constructor<?> constructor = someClass.getConstructor(String.class, String.class);
+                    breakfast.add((Food)constructor.newInstance(parameters[1], parameters[2]));
                 }
             } catch (ClassNotFoundException | NoSuchMethodException |
                     InstantiationException | IllegalAccessException | InvocationTargetException exception) {
