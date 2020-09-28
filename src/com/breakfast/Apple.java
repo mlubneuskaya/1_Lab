@@ -12,6 +12,13 @@ public class Apple extends Food {
     public String toString(){
         return super.toString() + " size: " + size;
     }
+    public boolean equals(Object object){
+        if(super.equals(object)){
+            return (this.getName() == ((Food)object).getName() &&
+                    size.equals(((Apple) object).getSize()));
+        }
+        return false;
+    }
     public String getSize(){
         return size;
     }

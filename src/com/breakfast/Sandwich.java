@@ -17,6 +17,14 @@ public class Sandwich extends Food {
         info += " filling №1: " + filling1 + ", filling №2: " + filling2;
         return info;
     }
+    public boolean equals(Object object){
+        if(super.equals(object)){
+            return ( this.getName() == ((Food)object).getName()
+                    &&(filling1.equals(((Sandwich) object).getFilling1())
+                    && filling2.equals(((Sandwich) object).getFilling2())));
+        }
+        return false;
+    }
     public String getFilling1(){
         return filling1;
     }

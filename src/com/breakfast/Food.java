@@ -1,20 +1,15 @@
 package com.breakfast;
 
 public abstract class Food {
-    FoodType name;
+    private final FoodType name;
     public Food(FoodType type){
         name = type;
     }
     public boolean equals(Object object){
-        if(!(object instanceof Food)){
-            return false;
-        }
-        for(FoodType type: FoodType.values()){
-            if(((Food)object).getName() == type){
-                return true;
-            }
-        }
-        return false;
+        return object instanceof Food;
+    }
+    public int hashCode(){
+        return this.toString().hashCode();
     }
     public  FoodType getName(){
         return this.name;
