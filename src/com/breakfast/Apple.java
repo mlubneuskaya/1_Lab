@@ -3,8 +3,8 @@ package com.breakfast;
 public class Apple extends Food {
     private String size;
 
-    public Apple(FoodType type, String size) {
-        super(type);
+    public Apple(String size) {
+        super(FoodType.APPLE);
         this.size = size;
     }
     public String toString(){
