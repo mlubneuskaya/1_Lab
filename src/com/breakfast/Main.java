@@ -1,9 +1,6 @@
 package com.breakfast;
 
 
-import static com.breakfast.FoodType.APPLE;
-import static com.breakfast.FoodType.CHEESE;
-import java.lang.reflect.Constructor;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
