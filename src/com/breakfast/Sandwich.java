@@ -12,6 +12,11 @@ public class Sandwich extends Food {
         this.filling1 = filling1;
         this.filling2 = filling2;
     }
+    public String toString(){
+        String info = super.toString();
+        info += " filling №1: " + filling1 + ", filling №2: " + filling2;
+        return info;
+    }
     public String getFilling1(){
         return filling1;
     }
