@@ -1,10 +1,12 @@
 package com.breakfast;
 
+import static com.breakfast.FoodType.APPLE;
+
 public class Apple extends Food {
     private String size;
 
     public Apple(String size) {
-        super(FoodType.APPLE);
+        super(APPLE);
         this.size = size;
     }
     public String toString(){
