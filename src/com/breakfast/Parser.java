@@ -5,8 +5,8 @@ import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Waiter {
-    public List<Food> getBreakfast(String[] arguments){
+public class Parser {
+    public List<Food> parseCommandLineArguments(String[] arguments){
         List<Food> breakfast = new ArrayList<>();
         for (String argument : arguments) {
             String[] parameters = argument.split("/");

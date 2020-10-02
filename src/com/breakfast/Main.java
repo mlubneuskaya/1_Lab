@@ -5,8 +5,8 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-        Waiter waiter = new Waiter();
-        List<Food> breakfast = waiter.getBreakfast(args);
+        Parser parser = new Parser();
+        List<Food> breakfast = parser.parseCommandLineArguments(args);
         Counter counter = new Counter();
         HashMap<Food, Integer> listOfFood = counter.countFood(breakfast);
         for (Food piece: listOfFood.keySet()){
