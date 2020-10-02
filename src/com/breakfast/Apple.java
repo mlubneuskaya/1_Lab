@@ -25,4 +25,9 @@ public class Apple extends Food {
     public void setSize(String size){
         this.size = size;
     }
+
+    @Override
+    public int calculateCalories() {
+        return 0;
+    }
 }

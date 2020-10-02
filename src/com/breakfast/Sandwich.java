@@ -37,4 +37,10 @@ public class Sandwich extends Food {
     public void setFilling2(String filing2){
         this.filling2 = filling2;
     }
+
+    @Override
+    public int calculateCalories() {
+        int calories;
+        return 0;
+    }
 }
