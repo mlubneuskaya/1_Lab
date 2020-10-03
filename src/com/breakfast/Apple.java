@@ -34,7 +34,7 @@ public class Apple extends Food {
         if(appleCalories.containsKey(this.getSize())){
             return appleCalories.get(this.getSize());
         }else{
-            System.out.println("cannot calculate calories of such an apple");
+            System.out.println("cannot calculate calories of a " + "\"" + this.getSize() + "\"" + " apple");
             return 0;
         }
     }

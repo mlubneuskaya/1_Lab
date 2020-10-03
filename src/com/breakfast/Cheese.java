@@ -21,7 +21,7 @@ public class Cheese extends Food {
         if(cheeseCalories.containsKey(this.getName().toString().toLowerCase())){
             return cheeseCalories.get(this.getName().toString().toLowerCase());
         }else{
-            System.out.println("cannot calculate calories of that");
+            System.out.println("cannot calculate calories of" + "\"" + this.getName().toString().toLowerCase() + "\"");
             return 0;
         }
     }

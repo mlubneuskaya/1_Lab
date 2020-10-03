@@ -47,7 +47,8 @@ public class Sandwich extends Food {
         if(sandwichCalories.containsKey(this.getFilling1()) && sandwichCalories.containsKey(this.getFilling2())){
             calories += sandwichCalories.get(this.getFilling1()) + sandwichCalories.get(this.getFilling2());
         }else{
-            System.out.println("cannot calculate calories of such a sandwich");
+            System.out.println("cannot calculate calories of a sandwich with "
+                    + "\"" + this.getFilling1() + "\"" + " and " + "\"" + this.getFilling2() + "\"");
             return 0;
         }
         return calories + 320; // + calories of sandwich bread
