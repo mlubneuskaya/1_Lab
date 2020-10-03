@@ -1,0 +1,47 @@
+{  "APPLE": [
+    {
+      "size": "big",
+      "calories": 152
+    },
+    {
+      "size": "medium",
+      "calories": 120
+    },
+    {
+      "size": "small",
+      "calories": 80
+    }
+  ],
+  "SANDWICH": [
+    {
+      "filling": "lettuce",
+      "calories": 0
+    },
+    {
+      "filling": "tomato",
+      "calories": 10
+    },
+    {
+      "filling": "tuna",
+      "calories": 100
+    },
+    {
+      "filling": "cheese",
+      "calories": 100
+    },
+    {
+      "filling": "mushrooms",
+      "calories": 15
+    },
+    {
+      "filling": "eggs",
+      "calories": 75
+    }
+  ],
+  "CHEESE": [
+    {
+      "name": "cheese",
+      "calories": 371
+    }
+  ]
+}
