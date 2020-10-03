@@ -1,5 +1,7 @@
 package com.breakfast;
 
+import java.util.HashMap;
+
 import static com.breakfast.FoodType.SANDWICH;
 
 public class Sandwich extends Food {
@@ -39,8 +41,15 @@ public class Sandwich extends Food {
     }
 
     @Override
-    public int calculateCalories() {
-        int calories;
-        return 0;
+    public int calculateCalories(HashMap<FoodType, HashMap<String, Integer>> caloriesTable) {
+        int calories = 0;
+        HashMap<String, Integer> sandwichCalories = caloriesTable.get(this.getName());
+        if(sandwichCalories.containsKey(this.getFilling1()) && sandwichCalories.containsKey(this.getFilling2())){
+            calories += sandwichCalories.get(this.getFilling1()) + sandwichCalories.get(this.getFilling2());
+        }else{
+            System.out.println("cannot calculate calories of such a sandwich");
+            return 0;
+        }
+        return calories + 320; // + calories of sandwich bread
     }
 }

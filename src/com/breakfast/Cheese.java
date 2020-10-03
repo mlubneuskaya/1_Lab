@@ -1,5 +1,7 @@
 package com.breakfast;
 
+import java.util.HashMap;
+
 import static com.breakfast.FoodType.CHEESE;
 
 public class Cheese extends Food {
@@ -14,7 +16,13 @@ public class Cheese extends Food {
     }
 
     @Override
-    public int calculateCalories() {
-        return 0;
+    public int calculateCalories(HashMap<FoodType, HashMap<String, Integer>> caloriesTable) {
+        HashMap<String, Integer> cheeseCalories = caloriesTable.get(this.getName());
+        if(cheeseCalories.containsKey(this.getName().toString().toLowerCase())){
+            return cheeseCalories.get(this.getName().toString().toLowerCase());
+        }else{
+            System.out.println("cannot calculate calories of that");
+            return 0;
+        }
     }
 }
