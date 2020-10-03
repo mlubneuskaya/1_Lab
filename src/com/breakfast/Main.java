@@ -19,8 +19,8 @@ public class Main {
                 breakfast.sort(new Comparator<>() {
                     @Override
                     public int compare(Food food1, Food food2) {
-                        return ((food1.getClass().getDeclaredFields().length
-                                - food2.getClass().getDeclaredFields().length));
+                        return ((food1.getName().toString().length()
+                                - food2.getName().toString().length()));
                     }
                 });
                 for (Food food: breakfast){
