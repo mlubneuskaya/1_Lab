@@ -1,6 +1,7 @@
-package com.breakfast;
+package com.breakfast.calories;
 
-import com.breakfast.FoodProperties.CaloriesTableGetter;
+import com.breakfast.food.Food;
+import com.breakfast.food.FoodType;
 
 import java.util.HashMap;
 import java.util.List;

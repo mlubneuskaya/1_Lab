@@ -1,8 +1,8 @@
-package com.breakfast;
+package com.breakfast.food;
 
 import java.util.HashMap;
 
-import static com.breakfast.FoodType.CHEESE;
+import static com.breakfast.food.FoodType.CHEESE;
 
 public class Cheese extends Food {
     public Cheese(){

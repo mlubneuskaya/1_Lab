@@ -1,5 +1,7 @@
 package com.breakfast;
 
+import com.breakfast.food.Food;
+
 import java.util.HashMap;
 import java.util.List;
 

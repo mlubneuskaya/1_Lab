@@ -1,10 +1,11 @@
-package com.breakfast.FoodProperties;
+package com.breakfast.calories;
 
-import com.breakfast.FoodType;
+import com.breakfast.food.FoodType;
+import com.breakfast.json.JSONFileReader;
 
 import java.util.HashMap;
 
-import static com.breakfast.FoodType.*;
+import static com.breakfast.food.FoodType.*;
 
 public class CaloriesTableGetter {
     JSONFileReader jsonFileReader;

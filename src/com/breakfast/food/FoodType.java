@@ -1,4 +1,4 @@
-package com.breakfast;
+package com.breakfast.food;
 
 public enum FoodType {
     APPLE,

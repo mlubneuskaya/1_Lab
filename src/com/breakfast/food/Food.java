@@ -1,6 +1,6 @@
-package com.breakfast;
+package com.breakfast.food;
 
-public abstract class Food implements Nutritious{
+public abstract class Food implements Nutritious {
     private final FoodType name;
     public Food(FoodType type){
         name = type;

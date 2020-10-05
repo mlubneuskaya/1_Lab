@@ -1,9 +1,8 @@
-package com.breakfast.FoodProperties;
+package com.breakfast.json;
 
-import com.breakfast.FoodType;
+import com.breakfast.food.FoodType;
 import org.json.JSONArray;
 import org.json.JSONObject;
-
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.HashMap;
@@ -11,7 +10,7 @@ import java.util.Scanner;
 
 public class JSONFileReader {
     private final String JSON;
-    JSONFileReader(String path){
+    public JSONFileReader(String path){
         File file = new File(path);
         Scanner scanner = null;
         try {

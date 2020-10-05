@@ -1,8 +1,8 @@
-package com.breakfast;
+package com.breakfast.food;
 
 import java.util.HashMap;
 
-import static com.breakfast.FoodType.APPLE;
+import static com.breakfast.food.FoodType.APPLE;
 
 public class Apple extends Food {
     private String size;

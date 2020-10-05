@@ -1,5 +1,7 @@
 package com.breakfast;
 
+import com.breakfast.calories.CaloriesCalculator;
+import com.breakfast.food.Food;
 import java.util.Comparator;
 import java.util.List;
 
@@ -9,8 +11,7 @@ public class Main {
         List<Food> breakfast = parser.parseCommandLineArguments(args);
         for(String arg: args){
             if(arg.equals("-calories")){
-                String jsonPath =
-                        "/home/maria/IdeaProjects/Breakfast/src/com/breakfast/FoodProperties/FoodProperties.json";
+                String jsonPath = "resources/FoodProperties.json";
                 CaloriesCalculator caloriesCalculator = new CaloriesCalculator();
                 System.out.println("number calories in breakfast: " +
                         caloriesCalculator.calculateCalories(jsonPath, breakfast));
