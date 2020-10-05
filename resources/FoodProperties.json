@@ -1,4 +1,4 @@
-{  "APPLE": [
+{  "Apple": [
     {
       "size": "big",
       "calories": 152
@@ -12,7 +12,7 @@
       "calories": 80
     }
   ],
-  "SANDWICH": [
+  "Sandwich": [
     {
       "filling": "lettuce",
       "calories": 0
@@ -38,7 +38,7 @@
       "calories": 75
     }
   ],
-  "CHEESE": [
+  "Cheese": [
     {
       "name": "cheese",
       "calories": 371

@@ -14,7 +14,7 @@ public class Main {
             if(arg.equals("-calories")){
                 String jsonPath = "resources/FoodProperties.json";
                 CaloriesCalculator caloriesCalculator = new CaloriesCalculator();
-                System.out.println("number calories in breakfast: " +
+                System.out.println("number of calories in breakfast: " +
                         caloriesCalculator.calculateCalories(jsonPath, breakfast));
             }
             if(arg.equals("-sort")){

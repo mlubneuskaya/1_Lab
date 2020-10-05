@@ -1,22 +1,25 @@
 package com.breakfast.food;
 
 public abstract class Food implements Nutritious {
-    private final FoodType name;
-    public Food(FoodType type){
+    private final String name;
+
+    public Food(String type) {
         name = type;
     }
-    public boolean equals(Object object){
+
+    public boolean equals(Object object) {
         return object instanceof Food;
     }
-    public int hashCode(){
+
+    public int hashCode() {
         return this.toString().hashCode();
     }
-    public  FoodType getName(){
+
+    public String getName() {
         return this.name;
     }
-    public String toString(){
-        String info =  this.name.toString();
-        info = info.charAt(0)  + info.substring(1).toLowerCase();
-        return info;
+
+    public String toString() {
+        return this.name;
     }
 }
