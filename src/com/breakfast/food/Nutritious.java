@@ -1,8 +1,8 @@
 package com.breakfast.food;
 
 
-import java.util.HashMap;
+import java.util.Map;
 
 public interface Nutritious {
-    int calculateCalories(HashMap<FoodType, HashMap<String, Integer>> caloriesTable);
+    int calculateCalories(Map<FoodType, Map<String, Integer>> caloriesTable);
 }

@@ -6,6 +6,7 @@ import org.json.JSONObject;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.HashMap;
+import java.util.Map;
 import java.util.Scanner;
 
 public class JSONFileReader {
@@ -26,8 +27,8 @@ public class JSONFileReader {
         }
         JSON = builder.toString();
     }
-    public HashMap<String, Integer> getTable(FoodType foodType, String[] parameters){
-        HashMap<String, Integer> caloriesTable = new HashMap<>();
+    public Map<String, Integer> getTable(FoodType foodType, String[] parameters){
+        Map<String, Integer> caloriesTable = new HashMap<>();
         JSONObject jsonObject = new JSONObject(JSON);
         JSONArray properties = jsonObject.getJSONArray(foodType.toString());
         for(int i = 0; i < properties.length(); i++){
