@@ -48,7 +48,7 @@ public class Sandwich extends Food {
     @Override
     public int calculateCalories(Map<String, Map<String, Integer>> caloriesTable) {
         int calories = 0;
-        Map<String, Integer> sandwichCalories = caloriesTable.get(this.getName());
+        Map<String, Integer> sandwichCalories = caloriesTable.get("Filling");
         if (sandwichCalories.containsKey(this.getFilling1()) && sandwichCalories.containsKey(this.getFilling2())) {
             calories += sandwichCalories.get(this.getFilling1()) + sandwichCalories.get(this.getFilling2());
         } else {

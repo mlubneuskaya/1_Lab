@@ -1,40 +1,40 @@
 {  "Apple": [
     {
-      "size": "big",
+      "name": "big",
       "calories": 152
     },
     {
-      "size": "medium",
+      "name": "medium",
       "calories": 120
     },
     {
-      "size": "small",
+      "name": "small",
       "calories": 80
     }
   ],
-  "Sandwich": [
+  "Filling": [
     {
-      "filling": "lettuce",
+      "name": "lettuce",
       "calories": 0
     },
     {
-      "filling": "tomato",
+      "name": "tomato",
       "calories": 10
     },
     {
-      "filling": "tuna",
+      "name": "tuna",
       "calories": 100
     },
     {
-      "filling": "cheese",
+      "name": "cheese",
       "calories": 100
     },
     {
-      "filling": "mushrooms",
+      "name": "mushrooms",
       "calories": 15
     },
     {
-      "filling": "eggs",
+      "name": "eggs",
       "calories": 75
     }
   ],

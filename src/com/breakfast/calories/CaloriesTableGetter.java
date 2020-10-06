@@ -15,9 +15,12 @@ public class CaloriesTableGetter {
 
     public Map<String, Map<String, Integer>> getCaloriesTable() {
         Map<String, Map<String, Integer>> caloriesTable = new HashMap<>();
-        caloriesTable.put("Apple", jsonFileReader.getTable("Apple", new String[]{"size", "calories"}));
-        caloriesTable.put("Sandwich", jsonFileReader.getTable("Sandwich", new String[]{"filling", "calories"}));
-        caloriesTable.put("Cheese", jsonFileReader.getTable("Cheese", new String[]{"name", "calories"}));
+        caloriesTable.put("Apple", jsonFileReader
+                .readTableFromFile("Apple"));
+        caloriesTable.put("Filling", jsonFileReader
+                .readTableFromFile("Filling"));
+        caloriesTable.put("Cheese", jsonFileReader
+                .readTableFromFile("Cheese"));
         return caloriesTable;
     }
 }

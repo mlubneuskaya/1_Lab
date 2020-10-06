@@ -30,13 +30,13 @@ public class JSONFileReader {
         JSON = builder.toString();
     }
 
-    public Map<String, Integer> getTable(String foodType, String[] parameters) {
+    public Map<String, Integer> readTableFromFile(String foodType) {
         Map<String, Integer> caloriesTable = new HashMap<>();
         JSONObject jsonObject = new JSONObject(JSON);
         JSONArray properties = jsonObject.getJSONArray(foodType);
         for (int i = 0; i < properties.length(); i++) {
-            caloriesTable.put(properties.getJSONObject(i).getString(parameters[0]),
-                    properties.getJSONObject(i).getInt(parameters[1]));
+            caloriesTable.put(properties.getJSONObject(i).getString("name"),
+                    properties.getJSONObject(i).getInt("calories"));
         }
         return caloriesTable;
     }
