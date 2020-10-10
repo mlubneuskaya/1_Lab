@@ -2,6 +2,8 @@ package com.breakfast.food;
 
 import com.breakfast.calories.CaloriesCalculator;
 
+import java.util.Objects;
+
 public class Filling extends Food {
     private final String type;
 
@@ -21,5 +23,19 @@ public class Filling extends Food {
     @Override
     public int calculateCalories() {
         return caloriesCalculator.calculateItemCalories(this);
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        if (!super.equals(o)) return false;
+        Filling filling = (Filling) o;
+        return Objects.equals(type, filling.type);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(super.hashCode(), type);
     }
 }

@@ -9,13 +9,6 @@ public class Cheese extends Food {
         super("cheese", caloriesCalculator);
     }
 
-    public boolean equals(Object object) {
-        if (super.equals(object)) {
-            return this.getName().equals(((Food) object).getName());
-        }
-        return false;
-    }
-
     @Override
     public int calculateCalories() {
         return caloriesCalculator.calculateItemCalories(this);

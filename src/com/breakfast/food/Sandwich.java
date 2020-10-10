@@ -2,6 +2,8 @@ package com.breakfast.food;
 
 import com.breakfast.calories.CaloriesCalculator;
 
+import java.util.Objects;
+
 @SuppressWarnings("unused")
 public class Sandwich extends Food {
 
@@ -25,15 +27,6 @@ public class Sandwich extends Food {
         return super.toString() + " with " + filling1 + " and " + filling2;
     }
 
-    public boolean equals(Object object) {
-        if (super.equals(object)) {
-            return (this.getName().equals(((Food) object).getName())
-                    && (filling1.equals(((Sandwich) object).getFilling1())
-                    && filling2.equals(((Sandwich) object).getFilling2())));
-        }
-        return false;
-    }
-
     public Filling getFilling1() {
         return filling1;
     }
@@ -53,5 +46,21 @@ public class Sandwich extends Food {
     @Override
     public int calculateCalories() {
         return filling1.calculateCalories() + filling2.calculateCalories() + bread.calculateCalories();
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        if (!super.equals(o)) return false;
+        Sandwich sandwich = (Sandwich) o;
+        return Objects.equals(filling1, sandwich.filling1) &&
+                Objects.equals(filling2, sandwich.filling2) &&
+                Objects.equals(bread, sandwich.bread);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(super.hashCode(), filling1, filling2, bread);
     }
 }
