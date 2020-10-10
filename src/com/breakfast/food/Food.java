@@ -16,10 +16,14 @@ public abstract class Food implements Nutritious {
     }
 
     public String getName() {
-        return this.name;
+        return name;
+    }
+
+    public String getType() {
+        return name;
     }
 
     public String toString() {
-        return this.name;
+        return name;
     }
 }

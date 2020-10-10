@@ -1,4 +1,4 @@
-{  "Apple": [
+{  "apple": [
     {
       "name": "big",
       "calories": 152
@@ -12,7 +12,7 @@
       "calories": 80
     }
   ],
-  "Filling": [
+  "filling": [
     {
       "name": "lettuce",
       "calories": 0
@@ -36,9 +36,13 @@
     {
       "name": "eggs",
       "calories": 75
+    },
+    {
+      "name": "bread",
+      "calories": 320
     }
   ],
-  "Cheese": [
+  "cheese": [
     {
       "name": "cheese",
       "calories": 371

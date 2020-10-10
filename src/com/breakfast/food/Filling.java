@@ -2,18 +2,20 @@ package com.breakfast.food;
 
 import com.breakfast.calories.CaloriesCalculator;
 
+public class Filling extends Food {
+    private final String type;
 
-public class Cheese extends Food {
-
-    public Cheese() {
-        super("cheese");
+    public Filling(String type) {
+        super("filling");
+        this.type = type;
     }
 
-    public boolean equals(Object object) {
-        if (super.equals(object)) {
-            return this.getName().equals(((Food) object).getName());
-        }
-        return false;
+    public String getType() {
+        return type;
+    }
+
+    public String toString() {
+        return type;
     }
 
     @Override
