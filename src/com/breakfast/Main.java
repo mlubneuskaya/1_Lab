@@ -5,6 +5,7 @@ import com.breakfast.food.Food;
 
 import java.util.Comparator;
 import java.util.List;
+import java.util.Map;
 
 public class Main {
     public static void main(String[] args) {
@@ -29,6 +30,12 @@ public class Main {
                     System.out.println(food);
                 }
             }
+        }
+        Counter counter = new Counter();
+        Map<Food, Integer> countedBreakfast = counter.countFood(breakfast);
+        System.out.println();
+        for(Food piece: countedBreakfast.keySet()){
+            System.out.println(piece + ": " + countedBreakfast.get(piece));
         }
     }
 }
