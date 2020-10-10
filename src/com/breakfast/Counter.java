@@ -4,10 +4,11 @@ import com.breakfast.food.Food;
 
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class Counter {
-    public HashMap<Food, Integer> countFood (List<Food> breakfast){
-        HashMap<Food, Integer> listOfFood = new HashMap<>();
+    public Map<Food, Integer> countFood (List<Food> breakfast){
+        Map<Food, Integer> listOfFood = new HashMap<>();
         for(Food piece: breakfast){
             if(!listOfFood.containsKey(piece)){
                 listOfFood.put(piece, 1);

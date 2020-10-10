@@ -8,13 +8,12 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
+        String jsonPath = "resources/FoodProperties.json";
+        CaloriesCalculator caloriesCalculator = new CaloriesCalculator(jsonPath);
         Parser parser = new Parser();
-        List<Food> breakfast = parser.parseCommandLineArguments(args);
+        List<Food> breakfast = parser.parseCommandLineArguments(args, caloriesCalculator);
         for (String arg : args) {
             if (arg.equals("-calories")) {
-                String jsonPath = "resources/FoodProperties.json";
-                CaloriesCalculator.setCaloriesTable(jsonPath);
-                CaloriesCalculator caloriesCalculator = new CaloriesCalculator();
                 System.out.println("number of calories in breakfast: " +
                         caloriesCalculator.calculateBreakfastCalories(breakfast));
             }

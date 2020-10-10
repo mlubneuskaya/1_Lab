@@ -6,12 +6,11 @@ import java.util.List;
 import java.util.Map;
 
 public class CaloriesCalculator {
-    private static Map<String, Map<String, Integer>> caloriesTable;
+    private final Map<String, Map<String, Integer>> caloriesTable;
 
-    public CaloriesCalculator() {
-        if (caloriesTable == null){
-            throw new NullPointerException("calories table is not initialized");
-        }
+    public CaloriesCalculator(String jsonFilePath) {
+        CaloriesTableGetter caloriesTableGetter = new CaloriesTableGetter(jsonFilePath);
+        caloriesTable = caloriesTableGetter.getCaloriesTable();
     }
 
     public int calculateBreakfastCalories(List<Food> breakfast) {
@@ -30,10 +29,5 @@ public class CaloriesCalculator {
             System.out.println("Cannot calculate calories of " + food);
             return 0;
         }
-    }
-
-    public static void setCaloriesTable(String jsonFilePath){
-        CaloriesTableGetter caloriesTableGetter = new CaloriesTableGetter(jsonFilePath);
-        caloriesTable = caloriesTableGetter.getCaloriesTable();
     }
 }

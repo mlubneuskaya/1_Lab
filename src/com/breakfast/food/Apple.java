@@ -3,16 +3,17 @@ package com.breakfast.food;
 
 import com.breakfast.calories.CaloriesCalculator;
 
+@SuppressWarnings("unused")
 public class Apple extends Food {
     private String type;
 
-    public Apple(String size) {
-        super("apple");
+    public Apple(String size, CaloriesCalculator caloriesCalculator) {
+        super("apple", caloriesCalculator);
         this.type = size;
     }
 
     public String toString() {
-        return super.toString() + " size: " + type;
+        return type + " " + super.toString();
     }
 
     public boolean equals(Object object) {
@@ -33,7 +34,6 @@ public class Apple extends Food {
 
     @Override
     public int calculateCalories() {
-        CaloriesCalculator calculator = new CaloriesCalculator();
-        return calculator.calculateItemCalories(this);
+        return caloriesCalculator.calculateItemCalories(this);
     }
 }

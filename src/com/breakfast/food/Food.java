@@ -1,10 +1,14 @@
 package com.breakfast.food;
 
+import com.breakfast.calories.CaloriesCalculator;
+
 public abstract class Food implements Nutritious {
     private final String name;
+    protected CaloriesCalculator caloriesCalculator;
 
-    public Food(String type) {
+    public Food(String type, CaloriesCalculator caloriesCalculator) {
         name = type;
+        this.caloriesCalculator = caloriesCalculator;
     }
 
     public boolean equals(Object object) {

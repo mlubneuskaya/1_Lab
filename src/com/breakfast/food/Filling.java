@@ -5,8 +5,8 @@ import com.breakfast.calories.CaloriesCalculator;
 public class Filling extends Food {
     private final String type;
 
-    public Filling(String type) {
-        super("filling");
+    public Filling(String type, CaloriesCalculator caloriesCalculator) {
+        super("filling", caloriesCalculator);
         this.type = type;
     }
 
@@ -20,7 +20,6 @@ public class Filling extends Food {
 
     @Override
     public int calculateCalories() {
-        CaloriesCalculator calculator = new CaloriesCalculator();
-        return calculator.calculateItemCalories(this);
+        return caloriesCalculator.calculateItemCalories(this);
     }
 }

@@ -1,23 +1,28 @@
 package com.breakfast.food;
 
+import com.breakfast.calories.CaloriesCalculator;
 
+@SuppressWarnings("unused")
 public class Sandwich extends Food {
 
     private Filling filling1;
     private Filling filling2;
     private final Filling bread;
 
-    public Sandwich(String filling1, String filling2) {
-        super("sandwich");
-        this.filling1 = new Filling(filling1);
-        this.filling2 = new Filling(filling2);
-        this.bread = new Filling("bread");
+
+    public Sandwich(String filling1, String filling2, CaloriesCalculator caloriesCalculator) {
+        this(new Filling(filling1, caloriesCalculator), new Filling(filling2, caloriesCalculator), caloriesCalculator);
+    }
+
+    public Sandwich(Filling filling1, Filling filling2, CaloriesCalculator caloriesCalculator){
+        super("sandwich", caloriesCalculator);
+        this.filling1 = filling1;
+        this.filling2 = filling2;
+        this.bread = new Filling("bread", caloriesCalculator);
     }
 
     public String toString() {
-        String info = super.toString();
-        info += " filling №1: " + filling1 + ", filling №2: " + filling2;
-        return info;
+        return super.toString() + " with " + filling1 + " and " + filling2;
     }
 
     public boolean equals(Object object) {

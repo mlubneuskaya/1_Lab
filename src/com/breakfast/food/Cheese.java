@@ -2,11 +2,11 @@ package com.breakfast.food;
 
 import com.breakfast.calories.CaloriesCalculator;
 
-
+@SuppressWarnings("unused")
 public class Cheese extends Food {
 
-    public Cheese() {
-        super("cheese");
+    public Cheese(CaloriesCalculator caloriesCalculator) {
+        super("cheese", caloriesCalculator);
     }
 
     public boolean equals(Object object) {
@@ -18,7 +18,6 @@ public class Cheese extends Food {
 
     @Override
     public int calculateCalories() {
-        CaloriesCalculator calculator = new CaloriesCalculator();
-        return calculator.calculateItemCalories(this);
+        return caloriesCalculator.calculateItemCalories(this);
     }
 }
